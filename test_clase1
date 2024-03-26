@@ -15,7 +15,7 @@ class Funciones {
         return  n % 2 ==0;
     }
 
-    boolean esBisiesto(int n) {
+    boolean esBisiesto(int n) {/*deberia ser n%400*/
     boolean res = (n%4==0  && n % 100 !=0 ) || (400 % n == 0);
         return (res) ;
     }
