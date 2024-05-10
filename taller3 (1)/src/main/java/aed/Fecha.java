@@ -1,36 +1,44 @@
 package aed;
-
+//un metodo que lleva void no devuelve dato
 public class Fecha {
-    private int _dia; 
-    private int _mes; 
-    public Fecha(int dia, int mes) {
-        this._dia = dia;
-        this._mes= dia;
+    private int _dia; //encapsulo las variables con private, para que luego no haya/halla(? cambios en su uso
+    private int _mes; //son propiedades
+    public Fecha(int dia, int mes) {//constructor Fecha
+        this._dia = dia;//con this hago referencia a estas variables
+        this._mes= mes;
     }
 
-    public Fecha(Fecha fecha) {
+    public Fecha(Fecha fecha) { //constructor copia Fecha y los objetos de Fecha y los llama fecha
+        this._dia =fecha._dia;
+        this._mes = fecha._mes;
         
     }
 
-    public Integer dia() {
-        
+    public Integer dia() {//metodo GETTER captador sii necesita que retorne algo
+        return this._dia;
     }
 
     public Integer mes() {
-        throw new UnsupportedOperationException("No implementada aun");
+        return this._mes;
     }
 
     public String toString() {
-        throw new UnsupportedOperationException("No implementada aun");
+        
+        return  Integer.toString(dia()) +"/"+Integer.toString(mes());
     }
-
+    
     @Override
     public boolean equals(Object otra) {
-        throw new UnsupportedOperationException("No implementada aun");
-    }
+       
+       return otra.equals(this.getClass());
+    } 
 
     public void incrementarDia() {
-        throw new UnsupportedOperationException("No implementada aun");
+        _dia=_dia+1;
+        if (_dia > diasEnMes(_mes)){
+            _dia=1;
+            _mes=_mes+1;
+        }
     }
 
     private int diasEnMes(int mes) {
