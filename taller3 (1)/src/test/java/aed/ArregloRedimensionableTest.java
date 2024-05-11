@@ -16,7 +16,7 @@ class ArregloRedimensionableTest {
     @Test
     void agregarPocosElementos() {
         ArregloRedimensionableDeRecordatorios vector = new ArregloRedimensionableDeRecordatorios();
-
+        vector.agregarAtras(new Recordatorio("1", new Fecha(1, 1), new Horario(0, 0)));
         vector.agregarAtras(new Recordatorio("2", new Fecha(1, 2), new Horario(0, 1)));
         vector.agregarAtras(new Recordatorio("3", new Fecha(1, 3), new Horario(0, 2)));
         vector.agregarAtras(new Recordatorio("4", new Fecha(1, 4), new Horario(0, 3)));

@@ -1,13 +1,19 @@
 package aed;
 
 public class Agenda {
+    Fecha _fecha;
+    Recordatorio _recordatorio;
+    Agenda agenda;
 
     public Agenda(Fecha fechaActual) {
-    
+        this._fecha=fechaActual;
     }
 
     public void agregarRecordatorio(Recordatorio recordatorio) {
-        throw new UnsupportedOperationException("No implementada aun");
+        ArregloRedimensionableDeRecordatorios agenda= new ArregloRedimensionableDeRecordatorios();
+        this._recordatorio=recordatorio;
+        agenda.agregarAtras(recordatorio);
+        
 
     }
 
@@ -23,7 +29,7 @@ public class Agenda {
     }
 
     public Fecha fechaActual() {
-        throw new UnsupportedOperationException("No implementada aun");
+        return _fecha;
     }
 
 }
