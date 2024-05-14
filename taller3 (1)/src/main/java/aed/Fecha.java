@@ -29,8 +29,13 @@ public class Fecha {
     
     @Override
     public boolean equals(Object otra) {
-       
-       return otra.equals(this.getClass());
+        boolean oen=(otra ==null);
+        boolean cd = otra.getClass() != this.getClass();
+        if (oen||cd){
+            return false;
+        }
+       Fecha otraFecha = (Fecha) otra;
+       return otraFecha._mes==_mes && otraFecha._dia==this._dia;
     } 
 
     public void incrementarDia() {

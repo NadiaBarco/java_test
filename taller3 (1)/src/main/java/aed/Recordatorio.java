@@ -6,7 +6,7 @@ public class Recordatorio {
     private Horario _horario;
     public Recordatorio(String mensaje, Fecha fecha, Horario horario) {
         this._mensaje=mensaje;
-        this._fecha=fecha;
+        this._fecha=(fecha);
         this._horario=horario;
     }
 
@@ -37,7 +37,8 @@ public class Recordatorio {
         }
 
         Recordatorio otroRecordatorio=(Recordatorio) otro;
-        return this._mensaje.equals(otroRecordatorio._mensaje)&& this._fecha.equals(otroRecordatorio._fecha)&& this._horario.equals(otroRecordatorio._horario);
+        return this._fecha.equals(otroRecordatorio._fecha)&&this._horario.equals(otroRecordatorio._horario)&&_mensaje.equals(otroRecordatorio._mensaje)
+       ;
     }
 
 }

@@ -1,13 +1,11 @@
 package aed;
 
-import java.util.Arrays;
-
 class ArregloRedimensionableDeRecordatorios implements SecuenciaDeRecordatorios {
     private Recordatorio[] _arreglo;
     private int _count;
     
     public ArregloRedimensionableDeRecordatorios() {
-        this._arreglo=new Recordatorio[0];
+        this._arreglo=new Recordatorio[10];
         this._count= 0;
 
     }

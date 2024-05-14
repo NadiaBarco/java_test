@@ -30,7 +30,13 @@ public class Horario {
 
     @Override
     public boolean equals(Object otro) {
-        return otro.equals(this.getClass());
+        boolean oen=(otro ==null);
+        boolean cd = otro.getClass() != this.getClass();
+        if (oen||cd){
+            return false;
+        }
+        Horario otroHorario = (Horario) otro;
+        return otroHorario._hora==this._hora && otroHorario._minutos==this._minutos;
     }
 
 }
